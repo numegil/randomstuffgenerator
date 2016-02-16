@@ -5,7 +5,7 @@ class GameAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'min_players',
-        'max',
+        'max_players',
     )
 
 admin.site.register(Game, GameAdmin)
