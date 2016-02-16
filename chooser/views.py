@@ -9,12 +9,14 @@ def get_random_game(request):
     num_players = int(request.GET['num_players'])
 
     games = Game.objects.filter(
-        min_players__gte=num_players,
-        max_players__lte=num_players,
+        min_players__lte=num_players,
+        max_players__gte=num_players,
     )
 
     if len(games) == 0:
-        return HttpResponse('No games found for ' + num_players + ' players.')
+        return HttpResponse(
+          'No games found for ' + str(num_players) + ' players.'
+        )
 
     game = choice(games)
 
