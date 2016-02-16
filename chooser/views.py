@@ -6,7 +6,7 @@ from random import choice
 from chooser.models import Game
 
 def get_random_game(request):
-    num_players = request.GET['num_players']
+    num_players = (int) request.GET['num_players']
 
     games = Game.objects.filter(
         min_players__gte=num_players,
