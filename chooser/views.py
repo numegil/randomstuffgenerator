@@ -9,6 +9,9 @@ import urllib2
 from chooser.models import Game
 
 def get_random_game(request):
+    if 'num_players' not in request.GET:
+        return HttpResponse('You need to set the num_players URL parameter. (now hiring UX designers!)')
+
     num_players = int(request.GET['num_players'])
 
     games = Game.objects.filter(
