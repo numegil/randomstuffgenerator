@@ -40,6 +40,12 @@ def get_random_page(request):
     if len(weather_json) < 10:
         return HttpResponse('Sorry, can\'t predict that date yet.')
 
+    if 'count' in request.GET:
+        count = request.GET['count']
+
+        if count != '1':
+            weather_json = weather_json + '_' + count
+
     weather_hash = int(hashlib.sha1(weather_json).hexdigest(), 16) % (10 ** 10)
     seed(weather_hash)
 
