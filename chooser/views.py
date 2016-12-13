@@ -79,12 +79,12 @@ def escape(request):
 <!-- Don't send me flowers when I'm dead. If you like me, send them while I'm alive. -->
 
 <form method="POST">
-Don't forget! Once someone leaves a quarantine zone they won't be allowed to reenter (for reasons of public safety, of course).
+Don't forget! If someone leaves a quarantine zone they won't be allowed to re-enter (for reasons of public safety, of course).
 
 <br />
 <br />
 
-Also, they have 30 minutes left to live. No big deal.
+Also, they would have 30 minutes left to live. No big deal.
 
 <br />
 <br />
