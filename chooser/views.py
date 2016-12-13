@@ -68,16 +68,6 @@ def escape(request):
 
         if all == ['cactus', 'pumpkin', 'traktor']:
             template = """
-            Don't forget! Once someone leaves a quarantine zone they won't be allowed to reenter (for reasons of public safety, of course).
-
-            <br />
-            <br />
-
-            Also, they have 30 minutes left to live. No big deal.
-
-            <br />
-            <br />
-
             <img src="http://i.imgur.com/nfvQ5ss.jpg" />
             """
 
@@ -87,6 +77,16 @@ def escape(request):
 
     template = """
 <form method="POST">
+Don't forget! Once someone leaves a quarantine zone they won't be allowed to reenter (for reasons of public safety, of course).
+
+<br />
+<br />
+
+Also, they have 30 minutes left to live. No big deal.
+
+<br />
+<br />
+
   <input type="text" name="first">
 
   <input type="text" name="second">
