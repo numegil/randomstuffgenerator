@@ -67,6 +67,18 @@ def escape(request):
         all = sorted([first.lower(), second.lower(), third.lower()])
 
         if all == ['cactus', 'pumpkin', 'traktor']:
+            template = """
+            <img src="http://i.imgur.com/CdoC97C.jpg" />
+
+            <br />
+            <br />
+
+            Don't forget! Once someone leaves a quarantine zone they won't be allowed to reenter for reasons of public safety. Also, they have 30 minutes left to live. No big deal.
+            """
+
+            return HttpResponse(template)
+
+    return HttpResponse(template)
             return HttpResponse('Yup.')
 
         return HttpResponse('Nope.')
