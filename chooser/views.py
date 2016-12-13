@@ -56,6 +56,7 @@ def get_random_page(request):
       )
     )
 
+@csrf_exempt
 def escape(request):
     if request.method == "POST":
         first = request.POST['first']
@@ -81,6 +82,7 @@ def escape(request):
 
   Giggles of Death:<br>
   <input type="text" name="third">
+  <br>
   <br>
 
   <input type="submit" value="Submit">
