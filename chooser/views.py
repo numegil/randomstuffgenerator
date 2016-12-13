@@ -78,7 +78,7 @@ def escape(request):
             <br />
             <br />
 
-            <img src="http://i.imgur.com/CdoC97C.jpg" />
+            <img src="http://i.imgur.com/nfvQ5ss.jpg" />
             """
 
             return HttpResponse(template)
