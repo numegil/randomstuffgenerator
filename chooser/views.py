@@ -76,6 +76,8 @@ def escape(request):
         return HttpResponse('Nope.')
 
     template = """
+<!-- Death gives meaning to our lives. It gives importance and value to time. Time would become meaningless if there were too much of it. -->
+
 <form method="POST">
 Don't forget! Once someone leaves a quarantine zone they won't be allowed to reenter (for reasons of public safety, of course).
 
