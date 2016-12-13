@@ -84,7 +84,7 @@ Don't forget! If someone leaves a quarantine zone they won't be allowed to re-en
 <br />
 <br />
 
-Also, they would have 30 minutes left to live. No big deal.
+Also, they would have 20 minutes left to live. No big deal.
 
 <br />
 <br />
