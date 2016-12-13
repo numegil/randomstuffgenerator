@@ -58,16 +58,31 @@ def get_random_page(request):
 
 def escape(request):
     if request.method == "POST":
-        return HttpResponse('You are playing:')
+        first = request.POST['first']
+        second = request.POST['second']
+        third = request.POST['third']
+
+        all = sorted([first.lower(), second.lower(), third.lower()])
+
+        if all == ['pumpkin', 'traktor', 'cactus']:
+            return HttpResponse('Yup.')
+
+        return HttpResponse('Nope.')
 
     template = """
-<form action="action_page.php">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
+<form method="POST">
+  Phone Guy:<br>
+  <input type="text" name="first">
   <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
+
+  zomg moar gifts:<br>
+  <input type="text" name="second">
+  <br>
+
+  Giggles of Death:<br>
+  <input type="text" name="third">
+  <br>
+
   <input type="submit" value="Submit">
 </form>
     """
