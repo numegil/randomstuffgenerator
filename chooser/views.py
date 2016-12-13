@@ -68,7 +68,7 @@ def escape(request):
 
         if all == ['cactus', 'pumpkin', 'traktor']:
             template = """
-            <img src="http://i.imgur.com/nfvQ5ss.jpg" />
+            <img style="max-width: 700px;" src="http://i.imgur.com/nfvQ5ss.jpg" />
             """
 
             return HttpResponse(template)
