@@ -66,6 +66,8 @@ def escape(request):
 
         all = sorted([first.lower(), second.lower(), third.lower()])
 
+        return HttpResponse(','.join(all))
+
         if all == ['pumpkin', 'traktor', 'cactus']:
             return HttpResponse('Yup.')
 
