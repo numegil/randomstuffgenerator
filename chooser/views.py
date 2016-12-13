@@ -73,15 +73,10 @@ def escape(request):
 
     template = """
 <form method="POST">
-  Phone Guy:<br>
   <input type="text" name="first">
-  <br>
 
-  zomg moar gifts:<br>
   <input type="text" name="second">
-  <br>
 
-  Giggles of Death:<br>
   <input type="text" name="third">
   <br>
   <br>
