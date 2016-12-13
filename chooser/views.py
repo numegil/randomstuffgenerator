@@ -78,9 +78,6 @@ def escape(request):
 
             return HttpResponse(template)
 
-    return HttpResponse(template)
-            return HttpResponse('Yup.')
-
         return HttpResponse('Nope.')
 
     template = """
