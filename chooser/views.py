@@ -55,3 +55,21 @@ def get_random_page(request):
         weather_hash,
       )
     )
+
+def escape(request):
+    if request.method == "POST":
+        return HttpResponse('You are playing:')
+
+    template = """
+<form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+    """
+
+    return HttpResponse(template)

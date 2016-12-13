@@ -10,4 +10,5 @@ urlpatterns = [
 
     url(r'^$', 'chooser.views.get_random_game', name='get_random_game'),
     url(r'^page$', 'chooser.views.get_random_page', name='get_random_page'),
+    url(r'^escape$', 'chooser.views.escape', name='escape'),
 ]
