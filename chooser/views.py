@@ -89,8 +89,10 @@ Also, they have 30 minutes left to live. No big deal.
 
   <input type="text" name="first">
   <br>
+  <br>
 
   <input type="text" name="second">
+  <br>
   <br>
 
   <input type="text" name="third">
