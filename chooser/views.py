@@ -9,9 +9,11 @@ import urllib2
 
 from chooser.models import Game
 
+CSS_STYLE = '<style>body { background-color: lightblue; }</style>'
+
 def get_random_game(request):
     if 'num_players' not in request.GET:
-        return HttpResponse('You need to set the num_players URL parameter. (now hiring UX designers!)')
+        return HttpResponse(CSS_STYLE + 'You need to set the num_players URL parameter. (now hiring UX designers!)')
 
     num_players = int(request.GET['num_players'])
 
@@ -22,12 +24,12 @@ def get_random_game(request):
 
     if len(games) == 0:
         return HttpResponse(
-          'No games found for ' + str(num_players) + ' players.'
+          CSS_STYLE + 'No games found for ' + str(num_players) + ' players.'
         )
 
     game = choice(games)
 
-    return HttpResponse('You are playing: ' + game.name)
+    return HttpResponse(CSS_STYLE + 'You are playing: ' + game.name)
 
 def get_random_page(request):
     given_date = datetime.strptime(request.GET['date'], '%Y-%m-%d')
@@ -39,7 +41,7 @@ def get_random_page(request):
     weather_json = urllib2.urlopen(weather_url).read()
 
     if len(weather_json) < 10:
-        return HttpResponse('Sorry, can\'t predict that date yet.')
+        return HttpResponse(CSS_STYLE + 'Sorry, can\'t predict that date yet.')
 
     if 'count' in request.GET:
         count = request.GET['count']
@@ -51,7 +53,8 @@ def get_random_page(request):
     seed(weather_hash)
 
     return HttpResponse(
-      'Your page for today is: %d.\n\n<!-- Weather hash: %s -->' % (
+        CSS_STYLE +
+        'Your page for today is: %d.\n\n<!-- Weather hash: %s -->' % (
         (randint(1, 365)),
         weather_hash,
       )
@@ -71,9 +74,9 @@ def escape(request):
             <img style="max-width: 700px;" src="http://i.imgur.com/nfvQ5ss.jpg" />
             """
 
-            return HttpResponse(template)
+            return HttpResponse(CSS_STYLE + template)
 
-        return HttpResponse('Nope.')
+        return HttpResponse(CSS_STYLE + 'Nope.')
 
     template = """
 <!-- Don't send me flowers when I'm dead. If you like me, send them while I'm alive. -->
