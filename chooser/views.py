@@ -13,7 +13,7 @@ CSS_STYLE = '<style>body { background-color: lightblue; }</style>'
 
 def get_random_game(request):
     if 'num_players' not in request.GET:
-        return HttpResponse(CSS_STYLE + 'You need to set the num_players URL parameter. (now hiring UX designers!)')
+        return HttpResponse(CSS_STYLE + 'You need to set the num_players URL parameter.')
 
     num_players = int(request.GET['num_players'])
 
@@ -108,4 +108,4 @@ Also, they would have 20 minutes left to live. No big deal.
 </form>
     """
 
-    return HttpResponse(template)
+    return HttpResponse(CSS_STYLE + template)
